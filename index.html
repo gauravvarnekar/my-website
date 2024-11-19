@@ -3,11 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
+    <title>Your Name - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .info div {
+            flex: 1 1 45%;
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .info div h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .info div p {
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .info div {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Simple Website!</h1>
-    <p>This is a small project hosted on GitHub Pages.</p>
+
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer | Designer | Creative Thinker</p>
+        <button onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+    </header>
+
+    <div class="content">
+        <section>
+            <h2>About Me</h2>
+            <p>Hello! I'm Your Name, a passionate web developer and designer. I love creating beautiful and functional websites that provide users with an amazing experience. I specialize in front-end development and have experience working with various web technologies.</p>
+        </section>
+
+        <section>
+            <h2>Contact Information</h2>
+            <div class="info">
+                <div>
+                    <h3>Email</h3>
+                    <p>your-email@example.com</p>
+                </div>
+                <div>
+                    <h3>Phone</h3>
+                    <p>+123 456 7890</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>My Skills</h2>
+            <div class="info">
+                <div>
+                    <h3>Front-End Development</h3>
+                    <p>HTML, CSS, JavaScript, React, Angular, Vue</p>
+                </div>
+                <div>
+                    <h3>Back-End Development</h3>
+                    <p>Node.js, Express, MongoDB, SQL</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>My Projects</h2>
+            <div class="info">
+                <div>
+                    <h3>Project One</h3>
+                    <p>Description of your first project. You can add more info like technologies used, challenges faced, and the impact it made.</p>
+                </div>
+                <div>
+                    <h3>Project Two</h3>
+                    <p>Description of your second project. Add more details about your project and what you've learned from it.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Created by <strong>Your Name</strong> | <a href="https://www.github.com/yourusername" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script>
+        // Toggle Dark/Light Mode
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-theme');
+            const currentTheme = body.classList.contains('dark-theme') ? 'Dark' : 'Light';
+            alert(`Switched to ${currentTheme} Mode!`);
+        }
+    </script>
+
 </body>
 </html>
 
